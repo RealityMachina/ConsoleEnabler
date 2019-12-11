@@ -23,9 +23,18 @@ namespace ConsoleEnabler
         {
             static void Postfix(GameConsoleWindow __instance)
             {
-                 GameConsoleWindow.DisableConsoleAccess = false;
+
+                ChangeBool(ref GameConsoleWindow.DisableConsoleAccess, false);
                 
             }
+
+
+            static void ChangeBool(ref bool changeThis, bool toThis)
+            {
+                changeThis = toThis;
+            }
         }
+
+       
     }
 }
