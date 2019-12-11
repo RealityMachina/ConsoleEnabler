@@ -18,8 +18,8 @@ namespace ConsoleEnabler
 
         }
 
-        [HarmonyPatch(typeof(GameConsoleWindow), "Awake")]
-        public static class PhoenixPoint_GameConsoeWindow_AWake_Patch
+        [HarmonyPatch(typeof(GameConsoleWindow), "ToggleVisibility")]
+        public static class PhoenixPoint_GameConsoeWindow_ToggleVisibility_Patch
         {
             static void Postfix(GameConsoleWindow __instance)
             {
